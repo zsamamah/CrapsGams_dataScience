@@ -120,12 +120,14 @@ def visualisation():
     plt.xlabel('Rolls')
     plt.ylabel('Wins')
     plt.show()
+    plt.savefig('wins_vs_rolls.png')
     #losses
     plt.bar(losses_df['Rolls'], losses_df['Losses'])
     plt.title("Losses vs Rolls")
     plt.xlabel('Rolls')
     plt.ylabel('Losses')
     plt.show()
+    plt.savefig('losses_vs_rolls.png')
     
     #visualize wins/losses vs rolls using seaborn
     sns.lineplot(x='Rolls', y='Wins', data=wins_df, color='blue')
@@ -135,9 +137,11 @@ def visualisation():
     #wins
     sns.scatterplot(x='Rolls',y='Wins',data=wins_df)
     plt.show()
+    plt.savefig('scatter_wins_vs_rolls.png')
     #losses
     sns.scatterplot(x='Rolls',y='Losses',data=losses_df)
     plt.show()
+    plt.savefig('scatter_losses_vs_rolls.png')
 
 if __name__ == "__main__":
     main()
